@@ -1,0 +1,7 @@
+{
+    "manifest_version": 2,
+    
+    "name": "AD CLEANER",
+    "description": "This program is a chrome extension that cleans up unwanted ad tags.",
+    "version": "1.0"
+}
