@@ -3,5 +3,13 @@
     
     "name": "AD CLEANER",
     "description": "This program is a chrome extension that cleans up unwanted ad tags.",
-    "version": "1.0"
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "./image/cleaner.png",
+        "default_popup": "./view/popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "<all_urls>"
+    ]
 }
