@@ -8,6 +8,12 @@
         "default_icon": "./image/cleaner.png",
         "default_popup": "./view/popup.html"
     },
+    "content_scripts": [
+        "matches": [
+            "http://*/*"
+        ],
+        "js": ["./src/js/contentscript.js"]
+    ],
     "permissions": [
         "activeTab",
         "<all_urls>"
