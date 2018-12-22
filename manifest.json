@@ -9,10 +9,10 @@
         "default_popup": "./view/popup.html"
     },
     "content_scripts": [
-        "matches": [
-            "http://*/*"
-        ],
-        "js": ["./src/js/contentscript.js"]
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["./src/js/contentscript.js"]
+        }
     ],
     "permissions": [
         "activeTab",
