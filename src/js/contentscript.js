@@ -25,6 +25,22 @@ removeTagToId = () => {
 	/* asiatoday tmpILSA_Container */
 	const elAdtmpILSA = document.getElementById('tmpILSA_Container');
 	elAdtmpILSA.remove();
+
+	/* asiatoday wingBnLeft */
+	const elAdWingBnLeft = document.getElementById('wingBnLeft');
+	elAdWingBnLeft.remove();
+
+	/* asiatoday wingBnRight */
+	const elAdWingBnRight = document.getElementById('wingBnRight');
+	elAdWingBnRight.remove();
+
+	/* asiatoday scrolling_banner */
+	const elAdScrollBanner = document.getElementById('scrolling_banner');
+	elAdScrollBanner.remove();
+
+	/* asiatoday scrolling_left_banner */
+	const elAdScrollLeftBanner = document.getElementById('scrolling_left_banner');
+	elAdScrollLeftBanner.remove();
 };
 
 /**
@@ -50,6 +66,18 @@ removeTagToClass = () => {
 	/* asiatoday ixx-popup-wrap */
 	const elAdIxxpopup = document.getElementsByClassName('ixx-popup-wrap');
 	Array.from(elAdIxxpopup).forEach(el => el.remove());
+
+	/* asiatoday link_site */
+	const elAdLinkSite = document.getElementsByClassName('link_site');
+	Array.from(elAdLinkSite).forEach(el => el.remove());
+
+	/* asiatoday mt15 */
+	const elAdMt15 = document.getElementsByClassName('mt15');
+	Array.from(elAdMt15).forEach(el => el.remove());
+
+	/* asiatoday mb08 */
+	const elAdMb08 = document.getElementsByClassName('mb08');
+	Array.from(elAdMb08).forEach(el => el.remove());
 };
 
 /**
@@ -87,6 +115,16 @@ removeTagToName = () => {
 		if (el.src.indexOf('dsp.adzon.net') > -1) {
 			el.remove();
 		}
+
+		/* asiatoday ad.adinc.k */
+		if (el.src.indexOf('ad.adinc.kr') > -1) {
+			el.remove();
+		}
+
+		/* asiatoday was.livere.me */
+		if (el.src.indexOf('was.livere.me') > -1) {
+			el.remove();
+		}
 	});
 
 	const elIns = document.getElementsByTagName('ins');
@@ -96,4 +134,13 @@ removeTagToName = () => {
 			el.remove();
 		}
 	});
+
+	const elEmbed = document.getElementsByTagName('embed');
+	Array.from(elEmbed).forEach(el => {
+		/* asiatoday adver */
+		if (el.className.indexOf('adver') > -1) {
+			el.remove();
+		}
+	});
+
 };
