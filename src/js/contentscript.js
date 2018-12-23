@@ -1,7 +1,37 @@
 window.onload = () => {
 	console.log("===AD CLEANMER===");
 
-	/* hankookilbo ad container */
+	removeTagToId();
+	removeTagToClass();
+	removeTagToName();
+};
+
+/**
+	Find Tag to remove with id.
+ */
+removeTagToId = () => {
+	/* asiatoday wp_adbn_root */
+	const elAdbnRoot = document.getElementById('wp_adbn_root');
+	elAdbnRoot.remove();
+
+	/* asiatoday sliderAdText */
+	const elAdText = document.getElementById('sliderAdText');
+	elAdText.closest('#scrollDiv').remove();
+
+	/* asiatoday ad_optima_wrap */
+	const elAdOptima = document.getElementById('ad_optima_wrap');
+	elAdOptima.remove();
+
+	/* asiatoday tmpILSA_Container */
+	const elAdtmpILSA = document.getElementById('tmpILSA_Container');
+	elAdtmpILSA.remove();
+};
+
+/**
+	Find Tag to remove with class.
+ */
+removeTagToClass = () => {
+/* hankookilbo ad container */
 	const elAdContainer = document.getElementsByClassName('ad-container');
 	Array.from(elAdContainer).forEach(el => el.remove());
 
@@ -20,23 +50,12 @@ window.onload = () => {
 	/* asiatoday ixx-popup-wrap */
 	const elAdIxxpopup = document.getElementsByClassName('ixx-popup-wrap');
 	Array.from(elAdIxxpopup).forEach(el => el.remove());
+};
 
-	/* asiatoday wp_adbn_root */
-	const elAdbnRoot = document.getElementById('wp_adbn_root');
-	elAdbnRoot.remove();
-
-	/* asiatoday sliderAdText */
-	const elAdText = document.getElementById('sliderAdText');
-	elAdText.closest('#scrollDiv').remove();
-
-	/* asiatoday ad_optima_wrap */
-	const elAdOptima = document.getElementById('ad_optima_wrap');
-	elAdOptima.remove();
-
-	/* asiatoday tmpILSA_Container */
-	const elAdtmpILSA = document.getElementById('tmpILSA_Container');
-	elAdtmpILSA.remove();
-
+/**
+	Find Tag to remove with Tag Name.
+ */
+removeTagToName = () => {
 	const elIframe = document.getElementsByTagName('iframe');
 	Array.from(elIframe).forEach(el => {
 		/* kwangju pub.adpnut.com */
