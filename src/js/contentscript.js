@@ -1,87 +1,114 @@
 window.onload = () => {
 	console.log("===AD CLEANMER===");
 
-	removeTagToId();
-	removeTagToClass();
+	findTagToId();
+	findTagToClass();
 	removeTagToName();
 };
 
 /**
-	Find Tag to remove with id.
- */
-removeTagToId = () => {
-	/* asiatoday wp_adbn_root */
-	const elAdbnRoot = document.getElementById('wp_adbn_root');
-	elAdbnRoot.remove();
+	Remove Tag
+*/
+removeTag = (el) => {
+	el && el.remove();
+}
 
-	/* asiatoday sliderAdText */
-	const elAdText = document.getElementById('sliderAdText');
-	elAdText.closest('#scrollDiv').remove();
+/**
+	Find Tag to Id
+*/
+findTagToId = () => {
+	/* asiatoday wp_adbn_root */
+	removeTagToId('wp_adbn_root');
+	
+	/* asiatoday scrollDiv */
+	removeTagToId('scrollDiv');
 
 	/* asiatoday ad_optima_wrap */
-	const elAdOptima = document.getElementById('ad_optima_wrap');
-	elAdOptima.remove();
+	removeTagToId('ad_optima_wrap');
 
 	/* asiatoday tmpILSA_Container */
-	const elAdtmpILSA = document.getElementById('tmpILSA_Container');
-	elAdtmpILSA.remove();
+	removeTagToId('tmpILSA_Container');
 
 	/* asiatoday wingBnLeft */
-	const elAdWingBnLeft = document.getElementById('wingBnLeft');
-	elAdWingBnLeft.remove();
+	removeTagToId('wingBnLeft');
 
 	/* asiatoday wingBnRight */
-	const elAdWingBnRight = document.getElementById('wingBnRight');
-	elAdWingBnRight.remove();
+	removeTagToId('wingBnRight');
 
 	/* asiatoday scrolling_banner */
-	const elAdScrollBanner = document.getElementById('scrolling_banner');
-	elAdScrollBanner.remove();
+	removeTagToId('scrolling_banner');
 
 	/* asiatoday scrolling_left_banner */
-	const elAdScrollLeftBanner = document.getElementById('scrolling_left_banner');
-	elAdScrollLeftBanner.remove();
-};
+	removeTagToId('scrolling_left_banner');
+
+	/* dt.co.kr topad */
+	removeTagToId('topad');
+
+	/* dt.co.kr top_ad */
+	removeTagToId('top_ad');
+
+	/* dt.co.kr top_ad */
+	removeTagToId('noticeAd_pc_wrap');
+
+	/* dt.co.kr top_ad */
+	removeTagToId('bnr');
+
+	/* dt.co.kr right_skyWingBanner */
+	removeTagToId('right_skyWingBanner');
+}
 
 /**
-	Find Tag to remove with class.
+	Remove with id.
  */
-removeTagToClass = () => {
-/* hankookilbo ad container */
-	const elAdContainer = document.getElementsByClassName('ad-container');
-	Array.from(elAdContainer).forEach(el => el.remove());
+removeTagToId = (id) => {
+	const el = document.getElementById(id);
+	removeTag(el);
+};
+
+findTagToClass = () => {
+	removeTagToClass('ad-container')
+
+	/* hankookilbo ad container */
+	removeTagToClass('ad-container');
 
 	/* asiatoday gad_wrap */
-	const elAdWap = document.getElementsByClassName('gad_wrap');
-	Array.from(elAdWap).forEach(el => el.remove());
+	removeTagToClass('gad_wrap');
 
 	/* asiatoday gad_wrap */
-	const elAdBox = document.getElementsByClassName('ad_box');
-	Array.from(elAdBox).forEach(el => el.remove());
+	removeTagToClass('ad_box');
 
 	/* asiatoday gad_wrap */
-	const elAdIwmads = document.getElementsByClassName('iwmads-wrapper');
-	Array.from(elAdIwmads).forEach(el => el.remove());
+	removeTagToClass('iwmads-wrapper');
 
 	/* asiatoday ixx-popup-wrap */
-	const elAdIxxpopup = document.getElementsByClassName('ixx-popup-wrap');
-	Array.from(elAdIxxpopup).forEach(el => el.remove());
+	removeTagToClass('ixx-popup-wrap');
 
 	/* asiatoday link_site */
-	const elAdLinkSite = document.getElementsByClassName('link_site');
-	Array.from(elAdLinkSite).forEach(el => el.remove());
+	removeTagToClass('link_site');
 
 	/* asiatoday mt15 */
-	const elAdMt15 = document.getElementsByClassName('mt15');
-	Array.from(elAdMt15).forEach(el => el.remove());
+	removeTagToClass('mt15');
 
 	/* asiatoday mb08 */
-	const elAdMb08 = document.getElementsByClassName('mb08');
-	Array.from(elAdMb08).forEach(el => el.remove());
+	removeTagToClass('mb08');
+
+	/* dt.co.kr trc_rbox_container */
+	removeTagToClass('trc_rbox_container');
+
+	/* dt.co.kr trc_related_container */
+	removeTagToClass('trc_related_container');
 };
 
 /**
-	Find Tag to remove with Tag Name.
+	Remove with class.
+ */
+removeTagToClass = (className) => {
+	const el = document.getElementsByClassName(className);
+	Array.from(el).forEach(el => el.remove());
+};
+
+/**
+	Remove with Tag Name.
  */
 removeTagToName = () => {
 	const elIframe = document.getElementsByTagName('iframe');
@@ -125,6 +152,16 @@ removeTagToName = () => {
 		if (el.src.indexOf('was.livere.me') > -1) {
 			el.remove();
 		}
+
+		/* dt.co.kr io1.innorame.com */
+		if (el.src.indexOf('io1.innorame.com') > -1) {
+			el.remove();
+		}
+
+		/* dt.co.kr /ads/ */
+		if (el.src.indexOf('/ads/') > -1) {
+			el.remove();
+		}
 	});
 
 	const elIns = document.getElementsByTagName('ins');
@@ -143,4 +180,11 @@ removeTagToName = () => {
 		}
 	});
 
+	const elImage = document.getElementsByTagName('img');
+	Array.from(elImage).forEach(el => {
+		/* dt.co.kr banner */
+		if (el.src.indexOf('banner') > -1) {
+			el.remove();
+		}
+	});
 };
