@@ -41,6 +41,12 @@ findTagToId = () => {
 	/* asiatoday scrolling_left_banner */
 	removeTagToId('scrolling_left_banner');
 
+	/* asiatoday inbnetDSP_B */
+	removeTagToId('inbnetDSP_B');
+
+	/* asiatoday section_aside */
+	removeTagToId('section_aside');
+
 	/* dt.co.kr topad */
 	removeTagToId('topad');
 
@@ -55,6 +61,24 @@ findTagToId = () => {
 
 	/* dt.co.kr right_skyWingBanner */
 	removeTagToId('right_skyWingBanner');
+
+	/* newsway aswift_0_expand */
+	removeTagToId('aswift_0_expand');
+
+	/* newsway aswift_1_expand */
+	removeTagToId('aswift_1_expand');
+
+	/* viva100 dablewidget_GokvjEXv */
+	removeTagToId('dablewidget_GokvjEXv');
+
+	/* viva100 viewElpVideo */
+	removeTagToId('viewElpVideo');
+
+	/* viva100 I_viva100_bottomcenter_580_400 */
+	removeTagToId('I_viva100_bottomcenter_580_400');
+
+	/* nocutnews pnlRightArea */
+	removeTagToId('pnlRightArea');
 }
 
 /**
@@ -97,6 +121,30 @@ findTagToClass = () => {
 
 	/* dt.co.kr trc_related_container */
 	removeTagToClass('trc_related_container');
+
+	/* newsway rightList */
+	removeTagToClass('rightList');
+
+	/* newsway text_ad */
+	removeTagToClass('text_ad');
+
+	/* newsway bannerad_02 */
+	removeTagToClass('bannerad_02');
+
+	/* viva100 con_right */
+	removeTagToClass('con_right')
+	
+	/* viva100 con_right */
+	removeTagToClass('con_right2');
+
+	/* viva100 ads_bottom */
+	removeTagToClass('ads_bottom');
+
+	/* nocutnews ad_sky */
+	removeTagToClass('ad_sky');
+
+	/* nocutnews ad_sky */
+	removeTagToClass('ad_sky2');
 };
 
 /**
