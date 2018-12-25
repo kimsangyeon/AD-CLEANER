@@ -79,6 +79,15 @@ findTagToId = () => {
 
 	/* nocutnews pnlRightArea */
 	removeTagToId('pnlRightArea');
+
+	/* zdnet ifgc */
+	removeTagToId('ifgc');
+
+	/* zdnet main_right_Floating_banner */
+	removeTagToId('main_right_Floating_banner');
+
+	/* zdnet mtMenu */
+	removeTagToId('mtMenu');
 }
 
 /**
@@ -145,6 +154,21 @@ findTagToClass = () => {
 
 	/* nocutnews ad_sky */
 	removeTagToClass('ad_sky2');
+
+	/* nocutnews ad_top1 */
+	removeTagToClass('ad_top1');
+
+	/* nocutnews head_adr2 */
+	removeTagToClass('head_adr2');
+
+	/* zdnet view_ad */
+	removeTagToClass('view_ad');
+
+	/* zdnet scroll_ad */
+	removeTagToClass('scroll_ad');
+
+	/* zdnet bn_box */
+	removeTagToClass('bn_box');
 };
 
 /**
