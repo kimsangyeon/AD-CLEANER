@@ -5,6 +5,22 @@ window.onload = () => {
 	findTagToClass();
 	removeTagToName();
 };
+				
+const tagIds = [
+	/* asiatoday */
+	'wp_adbn_root', 'scrollDiv', 'ad_optima_wrap', 'tmpILSA_Container', 'wingBnLeft',
+	'wingBnRight', 'scrolling_banner', 'scrolling_left_banner', 'inbnetDSP_B', 'section_aside',
+	/* dt.co.kr */
+	'topad', 'top_ad', 'noticeAd_pc_wrap', 'bnr', 'right_skyWingBanner',
+	/* newsway */
+	'aswift_0_expand', 'aswift_1_expand',
+	/* viva100 */
+	'dablewidget_GokvjEXv', 'viewElpVideo', 'I_viva100_bottomcenter_580_400',
+	/* nocutnews */
+	'pnlRightArea',
+	/* zdnet */
+	'ifgc', 'main_right_Floating_banner', 'mtMenu'
+];
 
 /**
 	Remove Tag
@@ -17,77 +33,7 @@ removeTag = (el) => {
 	Find Tag to Id
 */
 findTagToId = () => {
-	/* asiatoday wp_adbn_root */
-	removeTagToId('wp_adbn_root');
-	
-	/* asiatoday scrollDiv */
-	removeTagToId('scrollDiv');
-
-	/* asiatoday ad_optima_wrap */
-	removeTagToId('ad_optima_wrap');
-
-	/* asiatoday tmpILSA_Container */
-	removeTagToId('tmpILSA_Container');
-
-	/* asiatoday wingBnLeft */
-	removeTagToId('wingBnLeft');
-
-	/* asiatoday wingBnRight */
-	removeTagToId('wingBnRight');
-
-	/* asiatoday scrolling_banner */
-	removeTagToId('scrolling_banner');
-
-	/* asiatoday scrolling_left_banner */
-	removeTagToId('scrolling_left_banner');
-
-	/* asiatoday inbnetDSP_B */
-	removeTagToId('inbnetDSP_B');
-
-	/* asiatoday section_aside */
-	removeTagToId('section_aside');
-
-	/* dt.co.kr topad */
-	removeTagToId('topad');
-
-	/* dt.co.kr top_ad */
-	removeTagToId('top_ad');
-
-	/* dt.co.kr top_ad */
-	removeTagToId('noticeAd_pc_wrap');
-
-	/* dt.co.kr top_ad */
-	removeTagToId('bnr');
-
-	/* dt.co.kr right_skyWingBanner */
-	removeTagToId('right_skyWingBanner');
-
-	/* newsway aswift_0_expand */
-	removeTagToId('aswift_0_expand');
-
-	/* newsway aswift_1_expand */
-	removeTagToId('aswift_1_expand');
-
-	/* viva100 dablewidget_GokvjEXv */
-	removeTagToId('dablewidget_GokvjEXv');
-
-	/* viva100 viewElpVideo */
-	removeTagToId('viewElpVideo');
-
-	/* viva100 I_viva100_bottomcenter_580_400 */
-	removeTagToId('I_viva100_bottomcenter_580_400');
-
-	/* nocutnews pnlRightArea */
-	removeTagToId('pnlRightArea');
-
-	/* zdnet ifgc */
-	removeTagToId('ifgc');
-
-	/* zdnet main_right_Floating_banner */
-	removeTagToId('main_right_Floating_banner');
-
-	/* zdnet mtMenu */
-	removeTagToId('mtMenu');
+	tagIds.forEach(id => removeTagToId(id));
 }
 
 /**
