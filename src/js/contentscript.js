@@ -6,7 +6,7 @@ window.onload = () => {
 	removeTagToName();
 };
 				
-const tagIds = [
+const tagId = [
 	/* asiatoday */
 	'wp_adbn_root', 'scrollDiv', 'ad_optima_wrap', 'tmpILSA_Container', 'wingBnLeft',
 	'wingBnRight', 'scrolling_banner', 'scrolling_left_banner', 'inbnetDSP_B', 'section_aside',
@@ -21,6 +21,22 @@ const tagIds = [
 	/* zdnet */
 	'ifgc', 'main_right_Floating_banner', 'mtMenu'
 ];
+const tagClass = [
+	/* hankookilbo */
+	'ad-container',
+	/* asiatoday */
+	'gad_wrap', 'ad_box', 'iwmads-wrapper', 'ixx-popup-wrap', 'link_site', 'mt15', 'mb08',
+	/* dt.co.kr */
+	'trc_rbox_container', 'trc_related_container',
+	/* newsway */
+	'rightList', 'text_ad', 'bannerad_02',
+	/* viva100 */
+	'con_right', 'con_right2', 'ads_bottom',
+	/* nocutnews */
+	'ad_sky', 'ad_sky2', 'ad_top1', 'head_adr2',
+	/* zdnet */
+	'view_ad', 'scroll_ad', 'bn_box'
+];
 
 /**
 	Remove Tag
@@ -33,7 +49,7 @@ removeTag = (el) => {
 	Find Tag to Id
 */
 findTagToId = () => {
-	tagIds.forEach(id => removeTagToId(id));
+	tagId.forEach(id => removeTagToId(id));
 }
 
 /**
@@ -44,77 +60,12 @@ removeTagToId = (id) => {
 	removeTag(el);
 };
 
+/**
+	Find Tag to Class
+*/
 findTagToClass = () => {
-	removeTagToClass('ad-container')
+	tagClass.forEach(cl => removeTagToClass(cl));
 
-	/* hankookilbo ad container */
-	removeTagToClass('ad-container');
-
-	/* asiatoday gad_wrap */
-	removeTagToClass('gad_wrap');
-
-	/* asiatoday gad_wrap */
-	removeTagToClass('ad_box');
-
-	/* asiatoday gad_wrap */
-	removeTagToClass('iwmads-wrapper');
-
-	/* asiatoday ixx-popup-wrap */
-	removeTagToClass('ixx-popup-wrap');
-
-	/* asiatoday link_site */
-	removeTagToClass('link_site');
-
-	/* asiatoday mt15 */
-	removeTagToClass('mt15');
-
-	/* asiatoday mb08 */
-	removeTagToClass('mb08');
-
-	/* dt.co.kr trc_rbox_container */
-	removeTagToClass('trc_rbox_container');
-
-	/* dt.co.kr trc_related_container */
-	removeTagToClass('trc_related_container');
-
-	/* newsway rightList */
-	removeTagToClass('rightList');
-
-	/* newsway text_ad */
-	removeTagToClass('text_ad');
-
-	/* newsway bannerad_02 */
-	removeTagToClass('bannerad_02');
-
-	/* viva100 con_right */
-	removeTagToClass('con_right')
-	
-	/* viva100 con_right */
-	removeTagToClass('con_right2');
-
-	/* viva100 ads_bottom */
-	removeTagToClass('ads_bottom');
-
-	/* nocutnews ad_sky */
-	removeTagToClass('ad_sky');
-
-	/* nocutnews ad_sky */
-	removeTagToClass('ad_sky2');
-
-	/* nocutnews ad_top1 */
-	removeTagToClass('ad_top1');
-
-	/* nocutnews head_adr2 */
-	removeTagToClass('head_adr2');
-
-	/* zdnet view_ad */
-	removeTagToClass('view_ad');
-
-	/* zdnet scroll_ad */
-	removeTagToClass('scroll_ad');
-
-	/* zdnet bn_box */
-	removeTagToClass('bn_box');
 };
 
 /**
