@@ -1,4 +1,4 @@
-const {tagId, tagClass, iframeSrc} = consts;
+const {TAG_ID, TAG_CLASS, IFRAME_SRC} = consts;
 
 window.onload = () => {
 	console.log("===AD CLEANMER===");
@@ -19,7 +19,7 @@ removeTag = (el) => {
 	Find Tag to Id
 */
 findTagToId = () => {
-	tagId.forEach(id => removeTagToId(id));
+	TAG_ID.forEach(id => removeTagToId(id));
 }
 
 /**
@@ -34,7 +34,7 @@ removeTagToId = (id) => {
 	Find Tag to Class
 */
 findTagToClass = () => {
-	tagClass.forEach(cl => removeTagToClass(cl));
+	TAG_CLASS.forEach(cl => removeTagToClass(cl));
 
 };
 
@@ -52,7 +52,7 @@ removeTagToClass = (className) => {
 removeTagToName = () => {
 	const elIframe = document.getElementsByTagName('iframe');
 	Array.from(elIframe).forEach(el => {
-		if (iframeSrc.indexOf(el.src) > -1) {
+		if (IFRAME_SRC.indexOf(el.src) > -1) {
 			el.remove();
 		}
 	});

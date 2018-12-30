@@ -1,5 +1,5 @@
 const consts = {
-	tagId: [
+	TAG_ID: [
 		/* asiatoday */
 		'wp_adbn_root', 'scrollDiv', 'ad_optima_wrap', 'tmpILSA_Container', 'wingBnLeft',
 		'wingBnRight', 'scrolling_banner', 'scrolling_left_banner', 'inbnetDSP_B', 'section_aside',
@@ -14,7 +14,7 @@ const consts = {
 		/* zdnet */
 		'ifgc', 'main_right_Floating_banner', 'mtMenu'
 	],
-	tagClass: [
+	TAG_CLASS: [
 		/* hankookilbo */
 		'ad-container',
 		/* asiatoday */
@@ -30,7 +30,7 @@ const consts = {
 		/* zdnet */
 		'view_ad', 'scroll_ad', 'bn_box', 'top_bn_zone'
 	],
-	iframeSrc: [
+	IFRAME_SRC: [
 		/* kwangju */
 		'pub.adpnut.com',
 		/* asiatoday */
