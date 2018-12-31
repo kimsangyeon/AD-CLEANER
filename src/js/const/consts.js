@@ -28,7 +28,7 @@ const consts = {
 		/* nocutnews */
 		'ad_sky', 'ad_sky2', 'ad_top1', 'head_adr2',
 		/* zdnet */
-		'view_ad', 'scroll_ad', 'bn_box', 'top_bn_zone'
+		'view_ad', 'scroll_ad', 'bn_box', 'top_bn_zone', 'bitcoin_box', 'power_box'
 	],
 	IFRAME_SRC: [
 		/* kwangju */
