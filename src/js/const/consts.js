@@ -12,7 +12,9 @@ const consts = {
 		/* nocutnews */
 		'pnlRightArea',
 		/* zdnet */
-		'ifgc', 'main_right_Floating_banner', 'mtMenu'
+		'ifgc', 'main_right_Floating_banner', 'mtMenu',
+		/* sedaily */
+		'v-right', 'livereAd'
 	],
 	TAG_CLASS: [
 		/* hankookilbo */
@@ -28,7 +30,9 @@ const consts = {
 		/* nocutnews */
 		'ad_sky', 'ad_sky2', 'ad_top1', 'head_adr2',
 		/* zdnet */
-		'view_ad', 'scroll_ad', 'bn_box', 'top_bn_zone', 'bitcoin_box', 'power_box'
+		'view_ad', 'scroll_ad', 'bn_box', 'top_bn_zone', 'bitcoin_box', 'power_box',
+		/* sedaily */
+		'main_wing_banner', 'sub_ad_banner3', 'sub_ad_banner3_2', 'sub_ad_banner4', 'sub_ad_banner7', 'sub_ad_banner7_2'
 	],
 	IFRAME_SRC: [
 		/* kwangju */
