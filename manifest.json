@@ -8,6 +8,10 @@
         "default_icon": "./image/cleaner.png",
         "default_popup": "./view/popup.html"
     },
+    "background": {
+        "scripts": ["./src/js/background.js"],
+        "persistent": false
+    },
     "content_scripts": [
         {
             "matches": ["http://*/*", "https://*/*"],
