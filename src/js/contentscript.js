@@ -1,18 +1,29 @@
 const {TAG_ID, TAG_CLASS, IFRAME_SRC} = consts;
 
+let removeTagCount = 0;
+
 window.onload = () => {
 	console.log("===AD CLEANMER===");
-
-	findTagToId();
-	findTagToClass();
-	removeTagToName();
 };
+
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.message == "AD_CLEAN") {
+    	findTagToId();
+		findTagToClass();
+		removeTagToName();
+        
+        sendResponse({REMOVE_TAG_COUNT: removeTagCount});
+    }
+});
 
 /**
 	Remove Tag
 */
 removeTag = (el) => {
-	el && el.remove();
+	if (el) {
+		el.remove();
+		removeTagCount++;
+	}
 }
 
 /**
@@ -43,7 +54,7 @@ findTagToClass = () => {
  */
 removeTagToClass = (className) => {
 	const el = document.getElementsByClassName(className);
-	Array.from(el).forEach(el => el.remove());
+	Array.from(el).forEach(el => removeTag(el));
 };
 
 /**
@@ -53,7 +64,7 @@ removeTagToName = () => {
 	const elIframe = document.getElementsByTagName('iframe');
 	Array.from(elIframe).forEach(el => {
 		if (IFRAME_SRC.indexOf(el.src) > -1) {
-			el.remove();
+			removeTag(el);
 		}
 	});
 
@@ -61,7 +72,7 @@ removeTagToName = () => {
 	Array.from(elIns).forEach(el => {
 		/* asiatoday adsbyadop */
 		if (el.className.indexOf('adsbyadop') > -1) {
-			el.remove();
+			removeTag(el);
 		}
 	});
 
@@ -69,7 +80,7 @@ removeTagToName = () => {
 	Array.from(elEmbed).forEach(el => {
 		/* asiatoday adver */
 		if (el.className.indexOf('adver') > -1) {
-			el.remove();
+			removeTag(el);
 		}
 	});
 
@@ -77,7 +88,7 @@ removeTagToName = () => {
 	Array.from(elImage).forEach(el => {
 		/* dt.co.kr banner */
 		if (el.src.indexOf('banner') > -1) {
-			el.remove();
+			removeTag(el);
 		}
 	});
 };
