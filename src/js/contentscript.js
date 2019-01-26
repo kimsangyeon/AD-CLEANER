@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         findTagToClass();
         removeTagToName();
         
-        sendResponse(åREMOVE_TAG_COUNT: removeTagCount});
+        sendResponse({REMOVE_TAG_COUNT: removeTagCount});
     }
 });
 
