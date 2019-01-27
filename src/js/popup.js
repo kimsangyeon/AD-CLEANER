@@ -7,7 +7,7 @@ window.onload = () => {
 function cleanAD() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         chrome.tabs.sendMessage(tabs[0].id, {message: "AD_CLEAN"}, function(response) {
-            alert(response.REMOVE_TAG_COUNT);
+            alert(`Remove Tag: ${response.REMOVE_TAG_COUNT}`);
         });
     });
 }
