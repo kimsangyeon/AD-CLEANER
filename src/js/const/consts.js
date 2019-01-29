@@ -12,7 +12,7 @@ const consts = {
         /* nocutnews */
         'pnlRightArea',
         /* zdnet */
-        'ifgc', 'main_right_Floating_banner', 'mtMenu', 'dablewidget_GokqEJlv'
+        'ifgc', 'main_right_Floating_banner', 'mtMenu', 'dablewidget_GokqEJlv',
         /* sedaily */
         'v-right', 'livereAd'
     ],
