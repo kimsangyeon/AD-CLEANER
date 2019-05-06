@@ -22,7 +22,7 @@ Cilck Icon
 
 If you click the clean button of the tooltip, Will remove the AD Tag and expose the alert.
 
-![toolbar icon click](image/toolbarIcon.png)
+![toolbar icon click](image/alert.png)
 
 <br>
 
