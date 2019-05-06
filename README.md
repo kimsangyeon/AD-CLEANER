@@ -10,19 +10,19 @@ This program is a chrome extension that cleans up unwanted ad tags.
 
 AD CLENAER Toolbar Icon
 
-![toolbar icon](image/cleaner.png){: width="50px"}
+![toolbar icon](image/cleaner.png)
 
 <br>
 
-Cilck Icon
+Cilck Icon9
 
-![toolbar icon click](image/toolbarIcon.png){: width="100px"}
+![toolbar icon click](image/toolbarIcon.png)
 
 <br>
 
 If you click the clean button of the tooltip, Will remove the AD Tag and expose the alert.
 
-![toolbar icon click](image/alert.png){: width="50%"}
+![toolbar icon click](image/alert.png)
 
 <br>
 
